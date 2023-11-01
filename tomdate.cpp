@@ -20,7 +20,7 @@ int main()
 		h=b+1;
 		printf("Tom date is %d\\%d\\%d",g,h,c);
 	}
-	 else if ((a==30)&&(b==4||b==6||b==9||b==11||b==12))
+	 else if ((a==30)&&(b==4||b==6||b==9||b==11))
 	{
 		i=1;
 		j=b+1;
@@ -33,9 +33,9 @@ int main()
 	    m=c+1;
 	    printf("Tom date is %d\\%d\\%d",k,l,m);
 	 }
-	 else if (c%4==0 && (c%100!=0 || c%400==0))
+	 else if( (c%4==0 && (c%100!=0 || c%400==0)) && b==2)
 	 {
-	 	if (a==29 )
+	 	if (a==29  )
 	 	{
 	 	n=1;
 	 	printf("Tom date is %d\\%d\\%d",n,b+1,c);
@@ -48,9 +48,12 @@ int main()
 	 }
 	 else
 	  {
-	  	p=1;
-	  	printf("Tom date is %d\\%d\\%d",p,b+1,c);
-	  	
+		if(a<31)
+		{p=a;
+	  	printf("Tom date is %d\\%d\\%d",p+1,b,c);
+		}
+		else
+		 printf("Invalid Input");
 	  }
 	return(0);
 }
